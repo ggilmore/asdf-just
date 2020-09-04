@@ -3,6 +3,8 @@
 cd "$(dirname "${BASH_SOURCE[0]}")"/..
 set -euxo pipefail
 
-ci/render-ci-pipeline.sh
+just install
+just render-ci-pipeline
+just format lint
 
 git diff --exit-code .github/workflows/ci.yaml
