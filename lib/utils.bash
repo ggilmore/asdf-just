@@ -40,7 +40,7 @@ get_platform() {
     platform="$(uname)"
     case $platform in
     'Linux')
-        platform='unkown-linux-musl'
+        platform='unknown-linux-musl'
         ;;
     'Darwin')
         platform='apple-darwin'
