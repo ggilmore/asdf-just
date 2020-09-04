@@ -5,7 +5,7 @@ render-ci-pipeline:
 
 format: format-dhall prettier format-shfmt
 
-lint: format lint-dhall
+lint: format lint-dhall shellcheck
 
 prettier:
     yarn run prettier
@@ -15,6 +15,9 @@ format-dhall:
 
 lint-dhall:
     ./scripts/lint.sh
+
+shellcheck:
+    ./ci/shellcheck.sh
 
 format-shfmt:
     shfmt -w .
