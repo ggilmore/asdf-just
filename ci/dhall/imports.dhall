@@ -1,4 +1,4 @@
 let GitHubActions =
-      https://raw.githubusercontent.com/regadas/github-actions-dhall/a74bb80abe4b01e3eadec5cdfb5414f7efcb9b15/package.dhall sha256:71caf8ceb1cf2a79053ed53991ab75dd8ee7905c33fe81a85f0226c6ca59900d
+      https://raw.githubusercontent.com/regadas/github-actions-dhall/400bdb76b8f82dea25c14d6d9a36d85f4c04e4eb/package.dhall
 
 in  { GitHubActions }

@@ -5,7 +5,6 @@ set -euxo pipefail
 
 # https://github.com/asdf-vm/asdf-nodejs#install
 asdf plugin-add nodejs
-~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
 asdf plugin-add just https://github.com/ggilmore/asdf-just.git
 

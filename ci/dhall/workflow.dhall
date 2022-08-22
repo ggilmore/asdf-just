@@ -16,7 +16,10 @@ let asdf-plugin-test = ./jobs/asdf-plugin-test.dhall
 
 in  GitHubActions.Workflow::{
     , name = "CI"
-    , on = GitHubActions.On::{ push = Some GitHubActions.Push::{=} }
+    , on = GitHubActions.On::{
+      , push = Some GitHubActions.Push::{=}
+      , pull_request = Some GitHubActions.PullRequest::{=}
+      }
     , jobs = toMap
         { shellcheck
         , shfmt
