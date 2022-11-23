@@ -38,17 +38,27 @@ get_platform() {
     local platform
 
     platform="$(uname)"
+    arch="$(uname -m)"
     case $platform in
     'Linux')
         platform='unknown-linux-musl'
+        arch='x86_64' # TODO: needs to support arm64 and armv7 builds
         ;;
     'Darwin')
         platform='apple-darwin'
+        case $arch in
+        'arm64')
+            arch='aarch64'
+            ;;
+        *)
+            arch='x86_64'
+            ;;
+        esac
         ;;
     *) ;;
     esac
 
-    echo "x86_64-${platform}"
+    echo "${arch}-${platform}"
 }
 
 download_release() {
